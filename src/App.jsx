@@ -11,7 +11,7 @@ const App = () => {
             </a>
 
             <div className="relative z-0 bg-primary overflow-x-hidden">
-                <div className="bg-hero-pattern bg-cover bg-no-repeat bg-center">
+                <div className="relative min-h-[100svh] bg-hero-pattern">
                     <Navbar />
                     <Hero />
                 </div>

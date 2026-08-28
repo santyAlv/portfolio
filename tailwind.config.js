@@ -30,7 +30,7 @@ export default {
       },
       backgroundImage: {
         "hero-pattern":
-          "radial-gradient(ellipse 90% 70% at 75% 0%, rgba(56, 189, 248, 0.14), transparent 50%), radial-gradient(ellipse 60% 50% at 10% 90%, rgba(34, 211, 238, 0.08), transparent 45%), linear-gradient(180deg, #04080f 0%, #081422 45%, #04080f 100%)",
+          "radial-gradient(ellipse 90% 70% at 75% 0%, rgba(56, 189, 248, 0.14), transparent 50%), radial-gradient(ellipse 60% 50% at 10% 90%, rgba(34, 211, 238, 0.08), transparent 45%), linear-gradient(180deg, #04080f 0%, #061018 60%, #04080f 100%)",
         "card-shine":
           "linear-gradient(135deg, rgba(56, 189, 248, 0.08) 0%, transparent 50%, transparent 100%)",
       },

@@ -17,6 +17,7 @@ const Hero = () => {
         >
             <div className="hero-mesh" aria-hidden="true" />
             <div className="hero-glow" aria-hidden="true" />
+            <div className="hero-fade" aria-hidden="true" />
 
             <div className={`relative z-10 w-full max-w-7xl mx-auto ${styles.paddingX} pt-28 pb-24 sm:pt-36 sm:pb-28`}>
                 <div className="max-w-2xl sm:max-w-3xl">

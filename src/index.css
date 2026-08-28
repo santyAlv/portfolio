@@ -101,7 +101,17 @@ textarea:focus-visible {
     linear-gradient(rgba(56, 189, 248, 0.04) 1px, transparent 1px),
     linear-gradient(90deg, rgba(56, 189, 248, 0.04) 1px, transparent 1px);
   background-size: 56px 56px;
-  mask-image: radial-gradient(ellipse 75% 65% at 45% 35%, black 15%, transparent 72%);
+  mask-image: radial-gradient(ellipse 85% 80% at 45% 40%, black 20%, transparent 90%);
+  pointer-events: none;
+}
+
+.hero-fade {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 8rem;
+  background: linear-gradient(to bottom, transparent, #04080f);
   pointer-events: none;
 }
 
