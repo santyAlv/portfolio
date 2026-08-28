@@ -19,13 +19,14 @@ const Hero = () => {
             <div className="hero-glow" aria-hidden="true" />
 
             <div className={`relative z-10 w-full max-w-7xl mx-auto ${styles.paddingX} pt-28 pb-24 sm:pt-36 sm:pb-28`}>
-                <div className="max-w-3xl">
+                <div className="max-w-2xl sm:max-w-3xl">
                     <h1 id="hero-heading" className={styles.heroHeadText}>
-                        Hi, I&apos;m{" "}
-                        <span className="text-phosphor">Santiago Alvarez</span>
+                        Hi, I&apos;m Santiago
+                        <br />
+                        Alvarez
                     </h1>
 
-                    <p className="mt-6 sm:mt-8 text-secondary text-[16px] sm:text-[18px] max-w-xl leading-[1.7] font-sans">
+                    <p className="mt-5 sm:mt-6 text-secondary text-[15px] sm:text-[17px] max-w-xl leading-[1.65] font-sans font-normal">
                         I build web products that ship — SaaS, stores, and learning tools with real users behind
                         them.
                     </p>
