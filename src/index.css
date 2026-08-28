@@ -98,10 +98,10 @@ textarea:focus-visible {
   position: absolute;
   inset: 0;
   background-image:
-    linear-gradient(rgba(56, 189, 248, 0.04) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(56, 189, 248, 0.04) 1px, transparent 1px);
+    linear-gradient(rgba(56, 189, 248, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(56, 189, 248, 0.035) 1px, transparent 1px);
   background-size: 56px 56px;
-  mask-image: radial-gradient(ellipse 85% 80% at 45% 40%, black 20%, transparent 90%);
+  mask-image: linear-gradient(to bottom, black 0%, black 80%, transparent 100%);
   pointer-events: none;
 }
 
@@ -117,11 +117,10 @@ textarea:focus-visible {
 
 .hero-glow {
   position: absolute;
-  width: min(90vw, 640px);
-  height: min(70vh, 520px);
-  top: -10%;
-  right: -15%;
-  background: radial-gradient(circle, rgba(34, 211, 238, 0.12) 0%, transparent 68%);
+  inset: 0;
+  background:
+    radial-gradient(ellipse 70% 55% at 90% 10%, rgba(34, 211, 238, 0.14) 0%, transparent 55%),
+    radial-gradient(ellipse 55% 45% at 5% 85%, rgba(56, 189, 248, 0.08) 0%, transparent 50%);
   pointer-events: none;
 }
 
