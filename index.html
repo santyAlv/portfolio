@@ -6,11 +6,21 @@
   <link rel="icon" type="image/svg+xml" href="/portfolio/logo.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Portfolio of Santiago Alvarez — full-stack student. Projects built with React, Node.js, TypeScript, and more." />
-  <meta name="color-scheme" content="dark" />
-  <meta name="theme-color" content="#020617" />
+  <meta name="color-scheme" content="light dark" />
+  <meta name="theme-color" content="#ffffff" />
   <title>Santiago Alvarez | Portfolio</title>
-  <script type="module" crossorigin src="/portfolio/assets/index-2df71f8e.js"></script>
-  <link rel="stylesheet" href="/portfolio/assets/index-992030c3.css">
+  <script>
+    // Apply the saved (or system) theme before first paint to avoid a flash.
+    (function () {
+      try {
+        var saved = localStorage.getItem("theme");
+        var dark = saved ? saved === "dark" : window.matchMedia("(prefers-color-scheme: dark)").matches;
+        document.documentElement.classList.toggle("dark", dark);
+      } catch (e) {}
+    })();
+  </script>
+  <script type="module" crossorigin src="/portfolio/assets/index-ec94dfa8.js"></script>
+  <link rel="stylesheet" href="/portfolio/assets/index-4486b6e7.css">
 </head>
 
 <body>
