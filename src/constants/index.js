@@ -60,6 +60,15 @@ const languages = [
         badge: "https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E",
     },
     {
+        name: "TypeScript",
+    },
+    {
+        name: "Python",
+    },
+    {
+        name: "Kotlin",
+    },
+    {
         name: "Java",
         badge: "https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=black",
     },
@@ -145,7 +154,6 @@ const projects = [
             { name: "PostgreSQL" },
             { name: "Mercado Pago" },
         ],
-        source_code_link: "https://github.com/santyAlv/ValeriaPeluqueria",
         live_link: "https://valeriapeluqueria.com",
     },
     {
@@ -214,7 +222,7 @@ const projects = [
             { name: "HTML" },
             { name: "CSS" },
         ],
-        source_code_link: "https://github.com/santyAlv/juegocorrompido",
+        source_code_link: "https://github.com/santyAlv/GlitchTec",
     },
 ];
 

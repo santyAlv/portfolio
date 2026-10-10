@@ -33,15 +33,18 @@ const ProjectCard = ({ index, name, role, description, tags, source_code_link, l
                     Live Site
                 </a>
             )}
-            <a
-                href={source_code_link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className={`btn ${live_link ? "btn-secondary" : "btn-primary"}`}
-            >
-                <Icon icon="mdi:github" className="w-4 h-4" aria-hidden="true" />
-                Github
-            </a>
+            {/* Private repos have no source_code_link, so no Github button. */}
+            {source_code_link && (
+                <a
+                    href={source_code_link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`btn ${live_link ? "btn-secondary" : "btn-primary"}`}
+                >
+                    <Icon icon="mdi:github" className="w-4 h-4" aria-hidden="true" />
+                    Github
+                </a>
+            )}
         </div>
 
         {role && <p className="mt-5 text-muted text-xs">Role : {role}</p>}
