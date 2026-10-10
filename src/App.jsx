@@ -1,7 +1,6 @@
 import { BrowserRouter } from "react-router-dom";
 
 import { About, Contact, Experience, Hero, Navbar, Projects, Tech } from "./components";
-import { styles } from "./styles";
 
 const App = () => {
     return (
@@ -10,28 +9,29 @@ const App = () => {
                 Skip to content
             </a>
 
-            <div className="relative z-0 bg-primary overflow-x-hidden">
-                <div className="relative min-h-[100svh] bg-hero-pattern">
-                    <Navbar />
-                    <Hero />
-                </div>
+            <div className="relative z-0 bg-bg text-fg overflow-x-hidden transition-colors duration-200">
+                <Navbar />
+                <Hero />
 
                 <main>
+                    <Projects />
                     <About />
                     <Tech />
                     <Experience />
-                    <Projects />
                     <Contact />
                 </main>
 
-                <footer className={`${styles.paddingX} py-8 sm:py-10 border-t border-accent/10`}>
-                    <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-3 text-center sm:text-left">
-                        <p className="font-display text-white/80 text-sm font-semibold tracking-tight">
-                            Santiago Alvarez
-                        </p>
-                        <p className="font-mono text-secondary text-xs">
-                            <time dateTime="2026">2026</time>
-                        </p>
+                <footer className="w-full max-w-6xl mx-auto px-5 sm:px-8 py-8 sm:py-10">
+                    <div className="flex flex-col-reverse sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
+                        <div>
+                            <p className="text-fg text-sm font-semibold">Building things people actually use.</p>
+                            <p className="text-muted text-xs mt-1">
+                                © Santiago Alvarez <time dateTime="2026">2026</time>. All rights reserved.
+                            </p>
+                        </div>
+                        <a href="#home" className="text-fg text-lg font-black tracking-tight" aria-label="Back to top">
+                            SA.
+                        </a>
                     </div>
                 </footer>
             </div>

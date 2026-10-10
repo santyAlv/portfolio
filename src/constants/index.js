@@ -1,9 +1,15 @@
-import { mobile, backend, creator, web } from "../assets";
-
 export const navLinks = [
     {
+        id: "#home",
+        title: "Home",
+    },
+    {
+        id: "#projects",
+        title: "Works",
+    },
+    {
         id: "#about",
-        title: "About me",
+        title: "About",
     },
     {
         id: "#skills",
@@ -12,14 +18,6 @@ export const navLinks = [
     {
         id: "#experience",
         title: "Experience",
-    },
-    {
-        id: "#projects",
-        title: "Projects",
-    },
-    {
-        id: "#contact",
-        title: "Contact",
     },
 ];
 
@@ -32,19 +30,19 @@ export const socialLinks = {
 const services = [
     {
         title: "Front-end Development",
-        icon: web,
+        icon: "mdi:monitor-dashboard",
     },
     {
         title: "Back-end Development",
-        icon: backend,
+        icon: "mdi:server-outline",
     },
     {
         title: "Student",
-        icon: mobile,
+        icon: "mdi:school-outline",
     },
     {
         title: "Creative Builder",
-        icon: creator,
+        icon: "mdi:lightbulb-on-outline",
     },
 ];
 
@@ -132,24 +130,6 @@ const tools = [
 
 const projects = [
     {
-        name: "Selah",
-        role: "Creator & Full-Stack",
-        difficulty: "advanced",
-        bentoClass: "bento-featured",
-        description:
-            "Multi-tenant appointment management SaaS. Businesses manage clients, scheduling, and WhatsApp with a React frontend, Express backend, and Supabase.",
-        tags: [
-            { name: "TypeScript" },
-            { name: "React" },
-            { name: "Node.js" },
-            { name: "Express" },
-            { name: "Supabase" },
-            { name: "PostgreSQL" },
-            { name: "Tailwind" },
-        ],
-        source_code_link: "https://github.com/santyAlv/selah",
-    },
-    {
         name: "Valeria Peluquería",
         role: "Full-Stack",
         difficulty: "advanced",
@@ -166,6 +146,41 @@ const projects = [
             { name: "Mercado Pago" },
         ],
         source_code_link: "https://github.com/santyAlv/ValeriaPeluqueria",
+        live_link: "https://valeriapeluqueria.com",
+    },
+    {
+        name: "ClicX",
+        role: "Creator & Full-Stack",
+        difficulty: "advanced",
+        bentoClass: "",
+        description:
+            "Turns your phone into a touchpad, keyboard, and remote control for a Windows PC. React Native app talking to a Python host over WebSocket on Wi-Fi, USB, or Bluetooth — no cloud.",
+        tags: [
+            { name: "TypeScript" },
+            { name: "React Native" },
+            { name: "Expo" },
+            { name: "Python" },
+            { name: "WebSocket" },
+        ],
+        source_code_link: "https://github.com/santyAlv/clicx-touchpad",
+        live_link: "https://santyalv.github.io/clicx-website/",
+    },
+    {
+        name: "Tío Tito Bot",
+        role: "Creator & Back-End",
+        difficulty: "advanced",
+        bentoClass: "",
+        description:
+            "WhatsApp bot with a group personality. It learns the tone and humor of a group chat, replies when mentioned, and sends spontaneous messages, powered by FastAPI and an LLM.",
+        tags: [
+            { name: "Python" },
+            { name: "FastAPI" },
+            { name: "Groq / Ollama" },
+            { name: "n8n" },
+            { name: "Evolution API" },
+            { name: "PostgreSQL" },
+        ],
+        source_code_link: "https://github.com/santyAlv/tio-tito-bot",
     },
     {
         name: "DiagramTec",

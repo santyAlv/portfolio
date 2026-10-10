@@ -6,7 +6,7 @@ const SOCIAL_ICONS = {
     Instagram: "mdi:instagram",
 };
 
-const SocialIcon = ({ name, className = "w-6 h-6" }) => (
+const SocialIcon = ({ name, className = "w-5 h-5" }) => (
     <Icon icon={SOCIAL_ICONS[name]} className={className} aria-hidden="true" />
 );
 
