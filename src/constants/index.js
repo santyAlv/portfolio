@@ -49,15 +49,12 @@ const services = [
 const languages = [
     {
         name: "HTML",
-        badge: "https://img.shields.io/badge/HTML-E34F26?style=for-the-badge&logo=html5&logoColor=white",
     },
     {
         name: "CSS",
-        badge: "https://img.shields.io/badge/CSS-1572B6?style=for-the-badge&logo=css3&logoColor=white",
     },
     {
         name: "JavaScript",
-        badge: "https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E",
     },
     {
         name: "TypeScript",
@@ -70,70 +67,93 @@ const languages = [
     },
     {
         name: "Java",
-        badge: "https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=black",
-    },
-    {
-        name: "Arduino",
-        badge: "https://img.shields.io/badge/-Arduino-00979D?style=for-the-badge&logo=Arduino&logoColor=white",
     },
     {
         name: "PHP",
-        badge: "https://img.shields.io/badge/php-%23777BB4.svg?style=for-the-badge&logo=php&logoColor=white",
     },
     {
         name: "C#",
-        badge: "https://img.shields.io/badge/c%23-%23239120.svg?style=for-the-badge&logo=csharp&logoColor=white",
+    },
+    {
+        name: "Arduino",
     },
     {
         name: "MySQL",
-        badge: "https://img.shields.io/badge/mysql-4479A1.svg?style=for-the-badge&logo=mysql&logoColor=white",
     },
 ];
 
 const tools = [
     {
-        name: "SQLite",
-        badge: "https://img.shields.io/badge/sqlite-%2307405e.svg?style=for-the-badge&logo=sqlite&logoColor=white",
+        name: "React",
     },
     {
-        name: "Git",
-        badge: "https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white",
+        name: "React Native",
     },
     {
-        name: ".NET",
-        badge: "https://img.shields.io/badge/.NET-5C2D91?style=for-the-badge&logo=.net&logoColor=white",
+        name: "Expo",
     },
     {
-        name: "Visual Studio",
-        badge: "https://img.shields.io/badge/Visual%20Studio-5C2D91.svg?style=for-the-badge&logo=visual-studio&logoColor=white",
+        name: "Vue",
+    },
+    {
+        name: "Tailwind CSS",
     },
     {
         name: "Bootstrap",
-        badge: "https://img.shields.io/badge/bootstrap-%238511FA.svg?style=for-the-badge&logo=bootstrap&logoColor=white",
     },
     {
-        name: "Figma",
-        badge: "https://img.shields.io/badge/figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white",
+        name: "Vite",
     },
     {
-        name: "Express.js",
-        badge: "https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB",
+        name: "Zustand",
     },
     {
-        name: "npm",
-        badge: "https://img.shields.io/badge/NPM-%23CB3837.svg?style=for-the-badge&logo=npm&logoColor=white",
+        name: "React Query",
     },
     {
         name: "Node.js",
-        badge: "https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white",
+    },
+    {
+        name: "Express.js",
+    },
+    {
+        name: "FastAPI",
+    },
+    {
+        name: "Django",
+    },
+    {
+        name: ".NET",
+    },
+    {
+        name: "PostgreSQL",
+    },
+    {
+        name: "SQLite",
+    },
+    {
+        name: "Supabase",
+    },
+    {
+        name: "Firebase",
+    },
+    {
+        name: "Docker",
+    },
+    {
+        name: "Git",
+    },
+    {
+        name: "npm",
     },
     {
         name: "Nodemon",
-        badge: "https://img.shields.io/badge/NODEMON-%23323330.svg?style=for-the-badge&logo=nodemon&logoColor=%BBDEAD",
     },
     {
-        name: "React",
-        badge: "https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB",
+        name: "Figma",
+    },
+    {
+        name: "Visual Studio",
     },
 ];
 
