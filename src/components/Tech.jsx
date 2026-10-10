@@ -3,47 +3,32 @@ import { motion } from "framer-motion";
 import { styles } from "../styles";
 import { SectionWrapper } from "../hoc";
 import { languages, tools } from "../constants";
-import { fadeIn, textVariant } from "../utils/motion";
+import { fadeIn } from "../utils/motion";
 
-const SkillBadge = ({ name, badge }) => (
-    <li className="transition-transform duration-200 hover:scale-[1.03]">
-        <img src={badge} alt={name} className="h-7 sm:h-8 max-w-full rounded-md" loading="lazy" />
-    </li>
+const SkillGroup = ({ title, skills }) => (
+    <div className="card p-5 sm:p-6">
+        <h3 className="text-fg text-sm font-semibold mb-4">{title}</h3>
+        <ul className="flex flex-wrap gap-2 list-none">
+            {skills.map((skill) => (
+                <li key={skill.name} className="tag-pill">
+                    {skill.name}
+                </li>
+            ))}
+        </ul>
+    </div>
 );
 
 const Tech = () => {
     return (
         <>
-            <motion.div variants={textVariant()}>
-                <p className={styles.sectionSubText}>Stack</p>
-                <h2 className={`${styles.sectionHeadText} mt-3`}>
-                    Skills<span className="text-accent">.</span>
-                </h2>
+            <motion.h2 variants={fadeIn("", "tween", 0, 0.5)} className={styles.sectionHeadText}>
+                Skills
+            </motion.h2>
+
+            <motion.div variants={fadeIn("", "tween", 0.1, 0.5)} className="mt-6 grid md:grid-cols-2 gap-4">
+                <SkillGroup title="Languages" skills={languages} />
+                <SkillGroup title="Tools & tech" skills={tools} />
             </motion.div>
-
-            <div className="section-rule mt-8 sm:mt-10" aria-hidden="true" />
-
-            <div className="bento-grid">
-                <motion.article variants={fadeIn("left", "spring", 0.1, 0.6)} className="bento-card bento-wide">
-                    <h3 className="font-mono text-accent/90 text-xs uppercase tracking-widest mb-4">Languages</h3>
-                    <ul className="flex flex-wrap gap-2 sm:gap-2.5 list-none">
-                        {languages.map((skill) => (
-                            <SkillBadge key={skill.name} {...skill} />
-                        ))}
-                    </ul>
-                </motion.article>
-
-                <motion.article variants={fadeIn("right", "spring", 0.2, 0.6)} className="bento-card bento-wide">
-                    <h3 className="font-mono text-accent/90 text-xs uppercase tracking-widest mb-4">
-                        Tools &amp; tech
-                    </h3>
-                    <ul className="flex flex-wrap gap-2 sm:gap-2.5 list-none">
-                        {tools.map((skill) => (
-                            <SkillBadge key={skill.name} {...skill} />
-                        ))}
-                    </ul>
-                </motion.article>
-            </div>
         </>
     );
 };

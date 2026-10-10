@@ -2,9 +2,9 @@ import { useRef, useState } from "react";
 import { motion } from "framer-motion";
 import { styles } from "../styles";
 import { SectionWrapper } from "../hoc";
-import { slideIn } from "../utils/motion";
+import { fadeIn } from "../utils/motion";
 import { socialLinks } from "../constants";
-import SocialIcon from "./SocialIcon";
+import SocialLinks from "./SocialLinks";
 
 const Contact = () => {
     const formRef = useRef();
@@ -49,136 +49,82 @@ const Contact = () => {
     };
 
     return (
-        <>
-            <motion.div variants={slideIn("up", "tween", 0.1, 0.8)} className="mb-8 sm:mb-10">
-                <p className={styles.sectionSubText}>Contact</p>
-                <h2 className={`${styles.sectionHeadText} mt-3`}>
-                    Get in <span className="text-accent">touch</span>
-                </h2>
+        <div className="grid md:grid-cols-2 gap-8 md:gap-10 items-start">
+            <motion.div variants={fadeIn("", "tween", 0, 0.5)} className="min-w-0 md:pt-3">
+                <h2 className={styles.sectionHeadText}>Let&apos;s Work Together</h2>
+                <p className={`${styles.bodyText} mt-2 max-w-sm`}>
+                    If you&apos;re interested in working together, please leave a message.
+                </p>
+                <SocialLinks className="mt-3" />
             </motion.div>
 
-            <div className="flex flex-col-reverse xl:flex-row gap-6 sm:gap-8 xl:gap-10">
-                <motion.div
-                    variants={slideIn("left", "tween", 0.2, 1)}
-                    className="flex-1 xl:flex-[0.75] contact-panel p-5 sm:p-8 min-w-0"
-                >
-                    <h3 className={`${styles.cardTitle} mb-1`}>Send a message</h3>
-                    <p className="text-secondary text-sm mb-8">Opens your email client with the message pre-filled.</p>
+            <motion.form
+                variants={fadeIn("", "tween", 0.1, 0.5)}
+                ref={formRef}
+                onSubmit={handleSubmit}
+                className="flex flex-col gap-3 min-w-0"
+                noValidate
+            >
+                <div className="flex flex-col">
+                    <label htmlFor="contact-name" className="sr-only">
+                        Name
+                    </label>
+                    <input
+                        id="contact-name"
+                        type="text"
+                        name="name"
+                        value={form.name}
+                        onChange={handleChange}
+                        placeholder="Name"
+                        aria-invalid={errors.name}
+                        className="input-field"
+                    />
+                    {errors.name && <span className="form-error">Enter your name.</span>}
+                </div>
 
-                    <form ref={formRef} onSubmit={handleSubmit} className="flex flex-col gap-6" noValidate>
-                        <div className="flex flex-col">
-                            <label htmlFor="contact-name" className="font-mono text-xs text-accent/80 uppercase tracking-wider mb-2">
-                                Name
-                            </label>
-                            <input
-                                id="contact-name"
-                                type="text"
-                                name="name"
-                                value={form.name}
-                                onChange={handleChange}
-                                placeholder="Your name"
-                                aria-invalid={errors.name}
-                                className="input-field"
-                            />
-                            {errors.name && <span className="form-error">Enter your name.</span>}
-                        </div>
+                <div className="flex flex-col">
+                    <label htmlFor="contact-email" className="sr-only">
+                        Email
+                    </label>
+                    <input
+                        id="contact-email"
+                        type="email"
+                        name="email"
+                        value={form.email}
+                        onChange={handleChange}
+                        placeholder="Email"
+                        aria-invalid={errors.email}
+                        className="input-field"
+                    />
+                    {errors.email && <span className="form-error">Enter your email.</span>}
+                </div>
 
-                        <div className="flex flex-col">
-                            <label htmlFor="contact-email" className="font-mono text-xs text-accent/80 uppercase tracking-wider mb-2">
-                                Email
-                            </label>
-                            <input
-                                id="contact-email"
-                                type="email"
-                                name="email"
-                                value={form.email}
-                                onChange={handleChange}
-                                placeholder="you@email.com"
-                                aria-invalid={errors.email}
-                                className="input-field"
-                            />
-                            {errors.email && <span className="form-error">Enter your email.</span>}
-                        </div>
+                <div className="flex flex-col">
+                    <label htmlFor="contact-message" className="sr-only">
+                        Message
+                    </label>
+                    <textarea
+                        id="contact-message"
+                        rows={4}
+                        name="message"
+                        value={form.message}
+                        onChange={handleChange}
+                        placeholder="Your Message"
+                        aria-invalid={errors.message}
+                        className="input-field resize-y min-h-[96px]"
+                    />
+                    {errors.message && <span className="form-error">Message cannot be empty.</span>}
+                </div>
 
-                        <div className="flex flex-col">
-                            <label htmlFor="contact-message" className="font-mono text-xs text-accent/80 uppercase tracking-wider mb-2">
-                                Message
-                            </label>
-                            <textarea
-                                id="contact-message"
-                                rows={5}
-                                name="message"
-                                value={form.message}
-                                onChange={handleChange}
-                                placeholder="What do you want to build?"
-                                aria-invalid={errors.message}
-                                className="input-field resize-y min-h-[120px]"
-                            />
-                            {errors.message && <span className="form-error">Message cannot be empty.</span>}
-                        </div>
-
-                        <button
-                            type="submit"
-                            className="btn btn-gradient cyan-blue-gradient w-full sm:w-fit px-8 py-3 text-[14px] font-bold"
-                        >
-                            Send message
-                        </button>
-                    </form>
-                </motion.div>
-
-                <motion.aside
-                    variants={slideIn("right", "tween", 0.2, 1)}
-                    className="flex-1 min-w-0"
-                    aria-label="Social links and contact"
-                >
-                    <div className="contact-panel p-5 sm:p-8 h-full flex flex-col gap-4 sm:gap-5">
-                        <div>
-                            <h3 className={styles.cardTitle}>Connect</h3>
-                            <p className="text-secondary text-sm mt-2">Prefer a direct channel? Pick one below.</p>
-                        </div>
-
-                        <a
-                            href={`mailto:${socialLinks.email}`}
-                            className="social-row flex items-center gap-3 sm:gap-4 p-3.5 sm:p-4 min-w-0 no-link-style"
-                        >
-                            <SocialIcon name="Email" className="w-9 h-9 shrink-0 text-white" />
-                            <div className="min-w-0">
-                                <p className="font-mono text-accent/70 text-[10px] uppercase tracking-widest">Email</p>
-                                <p className="text-white font-medium text-sm sm:text-[15px] break-all mt-0.5">
-                                    {socialLinks.email}
-                                </p>
-                            </div>
-                        </a>
-
-                        <a
-                            href={socialLinks.github}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="social-row flex items-center gap-3 sm:gap-4 p-3.5 sm:p-4 no-link-style"
-                        >
-                            <SocialIcon name="GitHub" className="w-9 h-9 shrink-0 text-white" />
-                            <div>
-                                <p className="font-mono text-accent/70 text-[10px] uppercase tracking-widest">GitHub</p>
-                                <p className="text-white font-medium text-sm sm:text-[15px] mt-0.5">santyAlv</p>
-                            </div>
-                        </a>
-
-                        <a
-                            href={socialLinks.instagram}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="social-row flex items-center gap-3 sm:gap-4 p-3.5 sm:p-4 no-link-style"
-                        >
-                            <SocialIcon name="Instagram" className="w-9 h-9 shrink-0 text-white" />
-                            <div>
-                                <p className="font-mono text-accent/70 text-[10px] uppercase tracking-widest">Instagram</p>
-                                <p className="text-white font-medium text-sm sm:text-[15px] mt-0.5">@sssanti.a</p>
-                            </div>
-                        </a>
-                    </div>
-                </motion.aside>
-            </div>
-        </>
+                <div>
+                    <button type="submit" className="btn btn-primary">
+                        Send me a message
+                        <span aria-hidden="true">→</span>
+                    </button>
+                    <p className="text-muted text-xs mt-2">Opens your email client with the message pre-filled.</p>
+                </div>
+            </motion.form>
+        </div>
     );
 };
 

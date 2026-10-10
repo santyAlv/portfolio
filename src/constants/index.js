@@ -1,9 +1,15 @@
-import { mobile, backend, creator, web } from "../assets";
-
 export const navLinks = [
     {
+        id: "#home",
+        title: "Home",
+    },
+    {
+        id: "#projects",
+        title: "Works",
+    },
+    {
         id: "#about",
-        title: "About me",
+        title: "About",
     },
     {
         id: "#skills",
@@ -12,14 +18,6 @@ export const navLinks = [
     {
         id: "#experience",
         title: "Experience",
-    },
-    {
-        id: "#projects",
-        title: "Projects",
-    },
-    {
-        id: "#contact",
-        title: "Contact",
     },
 ];
 
@@ -32,19 +30,19 @@ export const socialLinks = {
 const services = [
     {
         title: "Front-end Development",
-        icon: web,
+        icon: "mdi:monitor-dashboard",
     },
     {
         title: "Back-end Development",
-        icon: backend,
+        icon: "mdi:server-outline",
     },
     {
         title: "Student",
-        icon: mobile,
+        icon: "mdi:school-outline",
     },
     {
         title: "Creative Builder",
-        icon: creator,
+        icon: "mdi:lightbulb-on-outline",
     },
 ];
 
